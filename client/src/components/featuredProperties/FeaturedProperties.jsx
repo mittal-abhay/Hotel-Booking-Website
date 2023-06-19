@@ -22,12 +22,10 @@ const FeaturedProperties = () => {
              <span>Excellent</span>
            </div>
             }
-           
           </div>)
       )}
       </>)}
     </div>
   );
 };
-
 export default FeaturedProperties;

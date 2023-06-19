@@ -33,7 +33,6 @@ app.use("/api/users",usersRoute);
 app.use("/api/hotels",hotelsRoute);
 app.use("/api/rooms",roomsRoute);
 
-
 //ErrorHandling middleware
 app.use((err,req,res,next)=>{
   const errorStatus = err.status || 500
