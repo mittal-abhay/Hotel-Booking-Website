@@ -1,4 +1,0 @@
-[build]
-  command = "npm run build"
-  ignore = "src/**/*.test.js"  # Optional: Ignore test files during the build process
-  environment = { CI = "false" }
