@@ -14,7 +14,7 @@ const Navbar = () => {
       
       {user? user.username:<div className="navItems">
         <button className="navButton">Register</button>
-        <button className="navButton">Login</button>
+        <button className="navButton"><a href = "/login">Login</a>L</button>
       </div>}
       </div>
     </div>
