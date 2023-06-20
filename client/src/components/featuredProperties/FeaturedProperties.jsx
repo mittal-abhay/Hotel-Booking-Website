@@ -2,7 +2,7 @@ import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading, error} = useFetch("/hotels?featured=true")
+  const { data, loading, error} = useFetch("https://hotel-booking-website-ssom.onrender.com/api/hotels?featured=true")
   return (
     <div className="fp">
       {loading? ("Loading") : (<>

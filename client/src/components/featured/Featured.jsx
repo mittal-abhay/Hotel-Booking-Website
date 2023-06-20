@@ -1,7 +1,7 @@
 import "./featured.css";
 import useFetch from "../../hooks/useFetch";
 const Featured = () => {
-    const { data, loading, error} = useFetch("/hotels/countByCity?cities=Berlin,Madrid,London")
+    const { data, loading, error} = useFetch("https://hotel-booking-website-ssom.onrender.com/api/hotels/countByCity?cities=Berlin,Madrid,London")
     // console.log(data);
   return (
     <div className="featured">
