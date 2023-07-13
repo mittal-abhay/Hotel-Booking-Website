@@ -8,6 +8,7 @@ import roomsRoute from "./routes/rooms.js"
 import cookieParser from "cookie-parser"
 import cors from "cors"
 const PORT = process.env.PORT || 3030;
+// const PORT = 8080;
 const app = express();
 dotenv.config();
 

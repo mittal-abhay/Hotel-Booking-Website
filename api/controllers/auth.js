@@ -35,5 +35,14 @@ export const login = async(req,res,next)=>{
     }catch(err){
         next(err)
     }
-    
+
+}
+
+export const logout = async(req,res,next)=>{
+    res.status(200).cookie("access_token",null,{
+        expires: new Date(Date.now()),
+    }).json({
+        success: true,
+        message: "Logged Out Successfully"
+    });
 }

@@ -5,7 +5,6 @@ const INITIAL_STATE = {
   loading: false,
   error: null,
 };
-
 export const AuthContext = createContext(INITIAL_STATE);
 const AuthReducer = (state, action) => {
   switch (action.type) {
@@ -43,7 +42,6 @@ export const AuthContextProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(state.user));
-    console.log(state.user);
   }, [state.user]);
 
   return (
