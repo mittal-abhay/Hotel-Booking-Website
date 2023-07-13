@@ -1,20 +1,13 @@
 import express from "express";
 import {
-    updateUser,deleteUser,getUser,getUsers
+    updateUser,deleteUser,getUser,getUsers,userByusername,userByemail
 } from "../controllers/user.js"
 import { verifyToken,verifyUser,verifyAdmin } from "../utils/verifyToken.js";
 const router = express.Router();
 
-// router.get("/checkauthentication",verifyToken,(req,res,next)=>{
-//     res.send("Hello user, you are logged in")
-// })
-// router.get("/checkuser/:id",verifyUser,(req,res,next)=>{
-//     res.send("Hello user, you are logged in and you can delete your account")
-// })
-// router.get("/checkadmin/:id", verifyAdmin, (req,res,next)=>{
-//   res.send("hello admin, you are logged in and you can delete all accounts")
-// })
-//UPDATE
+router.get("/findusername", userByusername);
+router.get("/findemail", userByemail);
+// //UPDATE
 router.put("/:id", verifyUser, updateUser);
 //DELETE
 router.delete("/:id",verifyUser,deleteUser)

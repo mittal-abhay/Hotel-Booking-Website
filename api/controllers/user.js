@@ -36,3 +36,22 @@ export const getUsers = async (req,res,next)=>{
     next(err);
   }
 }
+export const userByusername=async(req, res, next)=> {
+  try{
+      const user=await User.find({username:req.query.username});
+      res.status(200).json(user);
+  }catch(er)
+  {
+      next(err);
+  }
+}
+
+export const userByemail=async(req, res, next)=> {
+  try{
+      const user=await User.find({email:req.query.email});
+      res.status(200).json(user);
+  }catch(er)
+  {
+      next(err);
+  }
+}

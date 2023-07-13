@@ -1,7 +1,6 @@
 import "./hotel.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
-import MailList from "../../components/mailList/MailList";
 import Footer from "../../components/footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -27,7 +26,7 @@ const Hotel = () => {
   const { data, loading, error } = useFetch(`https://hotel-booking-website-ssom.onrender.com/api/hotels/find/${id}`);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-
+ 
   const { dates, options } = useContext(SearchContext);
 
   const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
@@ -62,6 +61,7 @@ const Hotel = () => {
       navigate("/login");
     }
   };
+
   return (
     <div>
       <Navbar />
@@ -141,7 +141,6 @@ const Hotel = () => {
               </div>
             </div>
           </div>
-          <MailList />
           <Footer />
         </div>
       )}
